@@ -1,20 +1,67 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+        <app-navbar></app-navbar>
+        <!-- Start home section -->
+        <div id="home">
+        <app-home></app-home>
+      </div>
+        <!-- End home section -->
+        <!-- Service section start -->
+        <div class="section primary-section" id="service">
+          <app-service></app-service>
+        </div>
+        <!-- Service section end -->
+        <!-- Portfolio section start -->
+        <div class="section secondary-section " id="portfolio">
+            <div class="triangle"></div>
+            <app-portfolio></app-portfolio>
+        </div>
+        <!-- Portfolio section end -->
+        <!-- About us section start -->
+        <div class="section primary-section" id="about">
+            <div class="triangle"></div>
+            <app-about></app-about>
+        </div>
+        <!-- About us section end -->
+        <div class="section secondary-section">
+            <div class="triangle"></div>
+            <div class="container centered">
+                <p class="large-text">Elegance is not the abundance of simplicity. It is the absence of complexity.</p>
+                <a href="#" class="button">Purshase now</a>
+            </div>
+        </div>
+        <!-- Client section start -->
+<!--
+        <div id="clients">
+            <app-clients-first></app-clients-first>
+        </div> -->
+
+
+        <div class="section third-section">
+            <app-clients-second></app-clients-second>
+        </div>
+        <!-- Price section start -->
+        <div id="price" class="section secondary-section">
+            <app-price></app-price>
+        </div>
+        <!-- Price section end -->
+        <!-- Newsletter section start -->
+        <div class="section third-section">
+              <app-newsletter></app-newsletter>
+        </div>
+        <!-- Newsletter section end -->
+        <!-- Contact section start -->
+        <div id="contact" class="contact">
+            <app-contact></app-contact>
+        </div>
+        <!-- Contact section edn -->
+        <!-- Footer section start -->
+        <div class="footer">
+            <p>&copy; 2013 Theme by <a href="http://www.graphberry.com">GraphBerry</a>, <a href="http://goo.gl/NM84K2">Documentation</a></p>
+        </div>
+        <!-- Footer section end -->
+        <!-- ScrollUp button start -->
+        <div class="scrollup">
+            <a href="#">
+                <i class="icon-up-open"></i>
+            </a>
+        </div>
