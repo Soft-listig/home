@@ -13,7 +13,8 @@ import { ClientsSecondComponent } from './components/clients-second/clients-seco
 import { PriceComponent } from './components/price/price.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { ContactComponent } from './components/contact/contact.component';
-
+import {InformacionService} from "./informacion.service";
+import {HttpModule} from "@angular/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +30,10 @@ import { ContactComponent } from './components/contact/contact.component';
     ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [InformacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
