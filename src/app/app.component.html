@@ -2,12 +2,99 @@
         <app-navbar></app-navbar>
         <!-- Start home section -->
         <div id="home">
-        <app-home></app-home>
-      </div>
+          <div id="da-slider" class="da-slider">
+              <div class="triangle"></div>
+              <!-- mask elemet use for masking background image -->
+              <div class="mask"></div>
+              <!-- All slides centred in container element -->
+              <div class="container">
+                <div class="da-slide">
+                    <h2 class="fittext2">{{header[0].titulo}}</h2>
+                    <h4>{{header[0].subtitulo}}</h4>
+                    <p>{{header[0].descripcion}}</p>
+                    <a href="#" class="da-link button">Read more</a>
+                    <div class="da-img">
+                        <img [src]="header[0].url" alt="image01" width="320">
+                    </div>
+                </div>
+                <div class="da-slide">
+                    <h2 class="fittext2">{{header[1].titulo}}</h2>
+                    <h4>{{header[1].subtitulo}}</h4>
+                    <p>{{header[1].descripcion}}</p>
+                    <a href="#" class="da-link button">Read more</a>
+                    <div class="da-img">
+                        <img [src]="header[1].url" alt="image01" width="320">
+                    </div>
+                </div>
+                <div class="da-slide">
+                    <h2 class="fittext2">{{header[2].titulo}}</h2>
+                    <h4>{{header[2].subtitulo}}</h4>
+                    <p>{{header[2].descripcion}}</p>
+                    <a href="#" class="da-link button">Read more</a>
+                    <div class="da-img">
+                        <img [src]="header[2].url" alt="image01" width="320">
+                    </div>
+                </div>
+                <div class="da-slide">
+                    <h2 class="fittext2">{{header[3].titulo}}</h2>
+                    <h4>{{header[3].subtitulo}}</h4>
+                    <p>{{header[3].descripcion}}</p>
+                    <a href="#" class="da-link button">Read more</a>
+                    <div class="da-img">
+                        <img [src]="header[3].url" alt="image01" width="320">
+                    </div>
+                </div>
+
+                  <!-- Start cSlide navigation arrows -->
+                  <div class="da-arrows">
+                      <span class="da-arrows-prev"></span>
+                      <span class="da-arrows-next"></span>
+                  </div>
+                  <!-- End cSlide navigation arrows -->
+              </div>
+          </div></div>
         <!-- End home section -->
         <!-- Service section start -->
         <div class="section primary-section" id="service">
-          <app-service></app-service>
+          <div class="container">
+              <!-- Start title section -->
+              <div class="title">
+                  <h1>¿A qué nos dedicamos?</h1>
+                  <!-- Section's title goes here -->
+                  <p>Ofrecemos soluciones tecnológicas a las empresas del sureste del país para eficiencientar sus procesos y maximizar sus ganancias mediante el empleo de aplicaciones móviles e internet de las cosas</p>
+                  <!--Simple description for section goes here. -->
+              </div>
+              <div class="row-fluid">
+                  <div class="span4">
+                      <div class="centered service">
+                          <div class="circle-border zoom-in">
+                              <img class="img-circle" src="../../assets/images/Service1.png" alt="service 1">
+                          </div>
+                          <h3>Modern Design</h3>
+                          <p>We Create Modern And Clean Theme For Your Business Company.</p>
+                      </div>
+                  </div>
+                  <div class="span4">
+                      <div class="centered service">
+                          <div class="circle-border zoom-in">
+                              <img class="img-circle" src="../../assets/images/Service2.png" alt="service 2" />
+                          </div>
+                          <h3>Powerfull Theme</h3>
+                          <p>We Create Modern And Powerful Theme With Lots Animation And Features</p>
+                      </div>
+                  </div>
+                  <div class="span4">
+                      <div class="centered service">
+                          <div class="circle-border zoom-in">
+                              <img class="img-circle" src="../../assets/images/Service3.png" alt="service 3">
+                          </div>
+                          <h3>Clean Code</h3>
+                          <p>We Create Modern And Powerful Html5 And CSS3 Code Easy For Read And Customize.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
         </div>
         <!-- Service section end -->
         <!-- Portfolio section start -->
@@ -19,14 +106,80 @@
         <!-- About us section start -->
         <div class="section primary-section" id="about">
             <div class="triangle"></div>
-            <app-about></app-about>
+            <div class="container">
+                <div class="title">
+                    <h1>¿Quiénes somos?</h1>
+                    <p>Somos una empresa de Mérida Yucatán cuya misión es ofrecer soluciones tecnológicas a las empresas del sureste del país para eficiencientar sus procesos y maximizar sus ganancias mediante el empleo de aplicaciones móviles e internet de las cosas</p>
+                </div>
+                <div class="row-fluid team">
+                    <div class="span4" *ngFor="let item of team">
+                        <div class="thumbnail">
+                            <img [src]="item.url" alt="team 1">
+                            <h3>{{item.nombre}}</h3>
+                            <ul class="social">
+                                <li>
+                                    <a href="{{item.facebook}}" target="_blank">
+                                        <span class="icon-facebook-circled"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="icon-twitter-circled"></span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <div class="mask">
+                                <h2>{{item.cargo}}</h2>
+                                <p>{{item.frase}}</p>
+                                <p>{{item.twitter}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="about-text centered">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                </div>
+                <h3>Skills</h3>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <ul class="skills">
+                            <li>
+                                <span class="bar" data-width="80%"></span>
+                                <h3>{{habilidades[0].nombre}}</h3>
+                            </li>
+                            <li>
+                                <span class="bar" data-width="95%"></span>
+                                <h3>{{habilidades[1].nombre}}</h3>
+                            </li>
+                            <li>
+                                <span class="bar" data-width="68%"></span>
+                                <h3>{{habilidades[2].nombre}}</h3>
+                            </li>
+                            <li>
+                                <span class="bar" data-width="70%"></span>
+                                <h3>{{habilidades[3].nombre}}</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <div class="highlighted-box center">
+                            <h1>We're Hiring</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, ullamcorper suscipit lobortis nisl ut aliquip consequat. I learned that we can do anything, but we can't do everything...</p>
+                            <button class="button button-sp">Join Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- About us section end -->
         <div class="section secondary-section">
             <div class="triangle"></div>
             <div class="container centered">
-                <p class="large-text">Elegance is not the abundance of simplicity. It is the absence of complexity.</p>
-                <a href="#" class="button">Purshase now</a>
+                <p class="large-text">{{generales.purchase_name}}</p>
+                <a href="#" class="button">Contratar ahora</a>
             </div>
         </div>
         <!-- Client section start -->
@@ -51,7 +204,82 @@
         <!-- Newsletter section end -->
         <!-- Contact section start -->
         <div id="contact" class="contact">
-            <app-contact></app-contact>
+          <div class="section secondary-section">
+                          <div class="container">
+                              <div class="title">
+                                  <h1>Contact Us</h1>
+                                  <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                              </div>
+                          </div>
+                          <div class="map-wrapper">
+                              <div class="map-canvas" id="map-canvas">Loading map...</div>
+                              <div class="container">
+                                  <div class="row-fluid">
+                                      <div class="span5 contact-form centered">
+                                          <h3>Say Hello</h3>
+                                          <div id="successSend" class="alert alert-success invisible">
+                                              <strong>Well done!</strong>Your message has been sent.</div>
+                                          <div id="errorSend" class="alert alert-error invisible">There was an error.</div>
+                                          <form id="contact-form" action="php/mail.php">
+                                              <div class="control-group">
+                                                  <div class="controls">
+                                                      <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." />
+                                                      <div class="error left-align" id="err-name">Please enter name.</div>
+                                                  </div>
+                                              </div>
+                                              <div class="control-group">
+                                                  <div class="controls">
+                                                      <input class="span12" type="email" name="email" id="email" placeholder="* Your email..." />
+                                                      <div class="error left-align" id="err-email">Please enter valid email adress.</div>
+                                                  </div>
+                                              </div>
+                                              <div class="control-group">
+                                                  <div class="controls">
+                                                      <textarea class="span12" name="comment" id="comment" placeholder="* Comments..."></textarea>
+                                                      <div class="error left-align" id="err-comment">Please enter your comment.</div>
+                                                  </div>
+                                              </div>
+                                              <div class="control-group">
+                                                  <div class="controls">
+                                                      <button id="send-mail" class="message-btn">Send message</button>
+                                                  </div>
+                                              </div>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="container">
+                              <div class="span9 center contact-info">
+                                  <p>{{generales.direccion}}</p>
+                                  <p class="info-mail">{{generales.email}}</p>
+                                  <p *ngFor="let phone of generales.telefonos">{{phone}}</p>
+                                  <div class="title">
+                                      <h3>Síguenos en nuestras redes sociales</h3>
+                                  </div>
+                              </div>
+                              <div class="row-fluid centered">
+                                  <ul class="social">
+                                      <li>
+                                          <a href="{{generales.facebook}}" target="_blank">
+                                              <span class="icon-facebook-circled"></span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="">
+                                              <span class="icon-twitter-circled"></span>
+                                          </a>
+                                      </li>
+
+                                      <li>
+                                          <a href="">
+                                              <span class="icon-gplus-circled"></span>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
         </div>
         <!-- Contact section edn -->
         <!-- Footer section start -->
