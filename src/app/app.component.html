@@ -91,33 +91,33 @@
                   <!--Simple description for section goes here. -->
               </div>
               <div class="row-fluid">
-                  <div class="span4">
+                  <div class="span4" *ngFor="let service of services">
                       <div class="centered service">
                           <div class="circle-border zoom-in">
-                              <img class="img-circle" src="../../assets/images/Service1.png" alt="service 1">
+                              <img class="img-circle" [src]="service.url" alt="service 1">
                           </div>
-                          <h3>Modern Design</h3>
-                          <p>We Create Modern And Clean Theme For Your Business Company.</p>
+                          <h3>{{service.title}}</h3>
+                          <p>{{service.subtitle}}</p>
                       </div>
                   </div>
-                  <div class="span4">
+                  <!-- <div class="span4">
                       <div class="centered service">
                           <div class="circle-border zoom-in">
-                              <img class="img-circle" src="../../assets/images/Service2.png" alt="service 2" />
+                              <img class="img-circle" [src]="services[1].url" alt="service 1">
                           </div>
-                          <h3>Powerfull Theme</h3>
-                          <p>We Create Modern And Powerful Theme With Lots Animation And Features</p>
+                          <h3>{{services[1].title}}</h3>
+                          <p>{{services[1].subtitle}}</p>
                       </div>
                   </div>
-                  <div class="span4">
-                      <div class="centered service">
-                          <div class="circle-border zoom-in">
-                              <img class="img-circle" src="../../assets/images/Service3.png" alt="service 3">
+                   <div class="span4">
+                          <div class="centered service">
+                              <div class="circle-border zoom-in">
+                                  <img class="img-circle" [src]="services[2].url" alt="service 1">
+                              </div>
+                              <h3>{{services[2].title}}</h3>
+                              <p>{{services[2].subtitle}}</p>
                           </div>
-                          <h3>Clean Code</h3>
-                          <p>We Create Modern And Powerful Html5 And CSS3 Code Easy For Read And Customize.</p>
-                      </div>
-                  </div>
+                      </div> -->
               </div>
           </div>
 
@@ -128,8 +128,8 @@
             <div class="triangle"></div>
             <div class="container">
                 <div class=" title">
-                    <h1>Have You Seen our Works?</h1>
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                    <h1>{{generales.trabajo_title}}</h1>
+                    <p>{{generales.trabajo_description}}</p>
                 </div>
                 <ul class="nav nav-pills">
                     <li class="filter" data-filter="all">
@@ -399,7 +399,7 @@
                     </div>
                     <!-- End details for portfolio project 9 -->
                     <ul id="portfolio-grid" class="thumbnails row">
-                        <li class="span4 mix web">
+                        <li class="span4 mix web" *ngFor="let cliente of clientes">
                             <div class="thumbnail">
                                 <img src="../../assets/images/Portfolio01.png" alt="project 1">
                                 <a href="#single-project" class="more show_hide" rel="#slidingDiv">
@@ -539,8 +539,8 @@
 
                 </div>
                 <div class="about-text centered">
-                    <h3>About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                    <h3>Acerca de nosotros</h3>
+                    <p>{{generales.about_us}}</p>
                 </div>
                 <h3>Skills</h3>
                 <div class="row-fluid">
@@ -566,9 +566,10 @@
                     </div>
                     <div class="span6">
                         <div class="highlighted-box center">
-                            <h1>We're Hiring</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, ullamcorper suscipit lobortis nisl ut aliquip consequat. I learned that we can do anything, but we can't do everything...</p>
-                            <button class="button button-sp">Join Us</button>
+                            <h2>¿Quieres entrar?</h2>
+                            <p>{{generales.reclutando_text}}</p>
+                            <a href="#contact" class="button button-sp">Unete</a>
+                            <!-- <button class="button button-sp" >Únete</button> -->
                         </div>
                     </div>
                 </div>
@@ -583,64 +584,61 @@
             </div>
         </div>
         <!-- Client section start -->
-<!--
+
         <div id="clients">
-            <app-clients-first></app-clients-first>
-        </div> -->
+          <div class="section third-section">
+            <div class="container centered">
+                <div class="sub-section">
+                    <div class="title clearfix">
+                        <div class="pull-left">
+                            <h3>Nuestros clientes</h3>
+                        </div>
+                        <ul class="client-nav pull-right">
+                            <li id="client-prev"></li>
+                            <li id="client-next"></li>
+                        </ul>
+                    </div>
+                    <ul class="row client-slider" id="clint-slider" >
 
+                        <li>
+                            <a href="">
+                                <img [src]="clientes[0].photoURL" alt="client logo 1">
+                            </a>
+                        </li>
 
-        <div class="section third-section">
-          <div class="container centered">
-              <div class="sub-section">
-                  <div class="title clearfix">
-                      <div class="pull-left">
-                          <h3>Nuestros clientes</h3>
-                      </div>
-                      <ul class="client-nav pull-right">
-                          <li id="client-prev"></li>
-                          <li id="client-next"></li>
-                      </ul>
-                  </div>
-                  <ul class="row client-slider" id="clint-slider">
-                      <li *ngFor="let cliente of clientes">
-                          <a href="cliente.url">
-                              <img [src]="cliente.photoURL" alt="client logo 1">
-                          </a>
-                      </li>
-                      <!-- <li>
-                          <a href="">
-                              <img src="../../assets/images/clients/ClientLogo02.png" alt="client logo 2">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
-                              <img src="../../assets/images/clients/ClientLogo03.png" alt="client logo 3">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
-                              <img src="../../assets/images/clients/ClientLogo04.png" alt="client logo 4">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
-                              <img src="../../assets/images/clients/ClientLogo05.png" alt="client logo 5">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
-                              <img src="../../assets/images/clients/ClientLogo02.png" alt="client logo 6">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
-                              <img src="../../assets/images/clients/ClientLogo04.png" alt="client logo 7">
-                          </a>
-                      </li> -->
-                  </ul>
-              </div>
+                        <li>
+                            <a href="">
+                                  <img [src]="clientes[1].photoURL" alt="client logo 2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                  <img [src]="clientes[2].photoURL" alt="client logo 1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                              <img [src]="clientes[3].photoURL" alt="client logo 1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                              <img [src]="clientes[4].photoURL" alt="client logo 1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                              <img [src]="clientes[1].photoURL" alt="client logo 1">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
           </div>
         </div>
+
+
+
         <!-- Price section start -->
         <div id="price" class="section secondary-section">
           <div class="container">

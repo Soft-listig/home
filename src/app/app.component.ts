@@ -21,6 +21,7 @@ export class AppComponent {
   public prices:any=[];
   public email2:string;
   public clientes:any=[];
+  public services:any=[];
   date:any;
   constructor(public _is:InformacionService, public http:Http, private afDB:AngularFireDatabase){
     this.home_data();
@@ -29,6 +30,7 @@ export class AppComponent {
     this.general();
     this.prices_data();
     this.clientes_data();
+    this.servicios();
     this.date= new Date().getFullYear();
 }
 
@@ -38,9 +40,16 @@ export class AppComponent {
         this.header.splice(0,1);
 });
   }
+  servicios(){
+    this.http.get("https://softlistig-cb3a2.firebaseio.com/items_logo.json").subscribe(data=>{
+      this.services=data.json();
+
+});
+  }
   clientes_data(){
     this.http.get("https://softlistig-cb3a2.firebaseio.com/clientes.json").subscribe(data=>{
       this.clientes=data.json();
+
 });
   }
 
@@ -53,7 +62,7 @@ this.http.get("https://softlistig-cb3a2.firebaseio.com/team.json").subscribe(dat
   prices_data(){
 this.http.get("https://softlistig-cb3a2.firebaseio.com/price.json").subscribe(data=>{
   this.prices=data.json();
-  console.log(this.prices);
+
 });
   }
 
@@ -67,27 +76,27 @@ this.http.get("https://softlistig-cb3a2.firebaseio.com/price.json").subscribe(da
   general(){
     this.http.get("https://softlistig-cb3a2.firebaseio.com/generales.json").subscribe(data=>{
       this.generales=data.json();
-      console.log("Generales: ",this.generales);
+
         this.generales.splice(0,1);
     });
   }
   subscribe_news(f: NgForm){
-     console.log(f.value);
+
       let news:newsletter={};
       news.email=f.value.email;
 let aux = news.email.indexOf("@");
-    console.log("aux: ",aux);
+
     let key =news.email;
     key=news.email.substring(0,aux);
-    console.log(key);
+
     this.afDB.object(`/newsletter/${key}`).update(news).then(()=>{
-      console.log("Listo")
+
     }).catch(()=>{
-      console.log("Hubo un error, intente nuevamente");
+
     });
 }
 send_comments(f: NgForm){
-   console.log(f.value);
+
     let comment:comments={};
     comment.comentario=f.value.comment;
     comment.email=f.value.email;
@@ -96,25 +105,12 @@ send_comments(f: NgForm){
     if(!comment.nombre && !comment.email){
 
     } else{
-      console.log(comment);
+  ;
       this.afDB.object(`/contactos/${comment.key}`).update(comment).then(()=>{
-        console.log("Listo")
       }).catch((err)=>{
-        console.log("Hubo un error, intente nuevamente",err);
       });
     }
-    //news.email=f.value.email;
 
-// let aux = news.email.indexOf("@");
-//   console.log("aux: ",aux);
-//   let key =news.email;
-//   key=news.email.substring(0,aux);
-//   console.log(key);
-  // this.afDB.object(`/newsletter/${key}`).update(news).then(()=>{
-  //   console.log("Listo")
-  // }).catch(()=>{
-  //   console.log("Hubo un error, intente nuevamente");
-  // });
 }
 
 }
