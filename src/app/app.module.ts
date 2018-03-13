@@ -7,6 +7,17 @@ import {InformacionService} from "./informacion.service";
 import {HttpModule} from "@angular/http";
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import {AboutComponent} from "./components/about/about.component";
+import {
+  ClientsFirstComponent,
+  ClientsSecondComponent,
+  ContactComponent,
+  HomeComponent,
+  NavbarComponent,
+  NewsletterComponent,
+  PortfolioComponent,
+  PriceComponent,
+  ServiceComponent} from "./components/index.paginas";
 
 import {AngularFireDatabase,AngularFireDatabaseModule} from "angularfire2/database";
 import { FormsModule } from '@angular/forms';
@@ -22,6 +33,16 @@ var config = {
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
+      ClientsFirstComponent,
+      ClientsSecondComponent,
+      ContactComponent,
+      HomeComponent,
+      NavbarComponent,
+      NewsletterComponent,
+      PortfolioComponent,
+      PriceComponent,
+      ServiceComponent
       ],
   imports: [
     BrowserModule,
@@ -30,7 +51,7 @@ var config = {
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(config),
-    FormsModule
+    FormsModule,
   ],
   providers: [InformacionService,
     AngularFireDatabase,
