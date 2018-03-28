@@ -3,7 +3,7 @@
     <div class="navbar-inner">
         <div class="container">
             <a href="#" class="brand">
-                <img src="../.../../assets/images/logo.png" width="120" height="40" alt="Logo" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/softlistig-cb3a2.appspot.com/o/soft-listig3.png?alt=media&token=f43fb3b5-0142-4f0a-a75c-e0a9052059b3" width="180" height="60" alt="Logo" />
                 <!-- This is website logo -->
             </a>
             <!-- Navigation button, visible on small resolution -->
@@ -17,7 +17,7 @@
                     <li><a href="#service">Servicios</a></li>
                     <li><a href="#portfolio">Proyectos</a></li>
                     <li><a href="#about">Acerca de nosotros</a></li>
-                    <li><a href="#clients">Clients</a></li>
+                    <!-- <li><a href="#clients">Clients</a></li> -->
                     <li><a href="#price">Precios</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
@@ -100,24 +100,7 @@
                           <p>{{service.subtitle}}</p>
                       </div>
                   </div>
-                  <!-- <div class="span4">
-                      <div class="centered service">
-                          <div class="circle-border zoom-in">
-                              <img class="img-circle" [src]="services[1].url" alt="service 1">
-                          </div>
-                          <h3>{{services[1].title}}</h3>
-                          <p>{{services[1].subtitle}}</p>
-                      </div>
-                  </div>
-                   <div class="span4">
-                          <div class="centered service">
-                              <div class="circle-border zoom-in">
-                                  <img class="img-circle" [src]="services[2].url" alt="service 1">
-                              </div>
-                              <h3>{{services[2].title}}</h3>
-                              <p>{{services[2].subtitle}}</p>
-                          </div>
-                      </div> -->
+
               </div>
           </div>
 
@@ -133,28 +116,28 @@
                 </div>
                 <ul class="nav nav-pills">
                     <li class="filter" data-filter="all">
-                        <a href="#noAction">All</a>
+                        <a href="#noAction">Todos</a>
                     </li>
                     <li class="filter" data-filter="web">
-                        <a href="#noAction">Web</a>
+                        <a href="#noAction">Hardware</a>
                     </li>
                     <li class="filter" data-filter="photo">
-                        <a href="#noAction">Photo</a>
+                        <a href="#noAction">Nativo</a>
                     </li>
                     <li class="filter" data-filter="identity">
-                        <a href="#noAction">Identity</a>
+                        <a href="#noAction">Internet de las cosas</a>
                     </li>
                 </ul>
                 <!-- Start details for portfolio project 1 -->
                 <div id="single-project">
                     <div id="slidingDiv" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="../../assets/images/Portfolio01.png" alt="project 1" />
+                            <img [src]="" alt="project 1" />
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>Prueba</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
@@ -177,12 +160,13 @@
                     <!-- Start details for portfolio project 2 -->
                     <div id="slidingDiv1" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="../../assets/images/Portfolio02.png" alt="project 2">
+                            <img [src]="portafolio.desc1.url" alt="project 2">
+
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>{{portafolio.desc1.Nombre}}</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
@@ -205,12 +189,12 @@
                     <!-- Start details for portfolio project 3 -->
                     <div id="slidingDiv2" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="../../assets/images/Portfolio03.png" alt="project 3">
+                            <img [src]="portafolio.desc2.url" alt="project 3">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>{{portafolio.desc2.Nombre}}</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
@@ -230,127 +214,44 @@
                         </div>
                     </div>
                     <!-- End details for portfolio project 3 -->
-                    <!-- Start details for portfolio project 4 -->
-                    <div id="slidingDiv3" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="../../assets/images/Portfolio04.png" alt="project 4">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Project for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>Life's but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more; it is a tale told by an idiot, full of sound and fury, signifying nothing.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 4 -->
+
                     <!-- Start details for portfolio project 5 -->
                     <div id="slidingDiv4" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="../../assets/images/Portfolio05.png" alt="project 5">
+                            <img [src]="portafolio.desc3.url" alt="project 5">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>{{portafolio.desc3.Nombre}}</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
                                 </div>
                                 <div class="project-info">
                                     <div>
-                                        <span>Client</span>Some Client Name</div>
+                                        <span>Nombre: </span>  Runvit- Energy Harvesting</div>
                                     <div>
-                                        <span>Date</span>July 2013</div>
+                                        <span>Fecha: </span>  Mayo 2013</div>
                                     <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Skills:    </span>  Energy harvesting, Electrónica, Diseño de circuito</div>
+
                                 </div>
-                                <p>We need to give each other the space to grow, to be ourselves, to exercise our diversity. We need to give each other space so that we may both give and receive such beautiful things as ideas, openness, dignity, joy, healing, and inclusion.</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
-                    <!-- End details for portfolio project 5 -->
-                    <!-- Start details for portfolio project 6 -->
-                    <div id="slidingDiv5" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="../../assets/images/Portfolio06.png" alt="project 6">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 6 -->
-                    <!-- Start details for portfolio project 7 -->
-                    <div id="slidingDiv6" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="../../assets/images/Portfolio07.png" alt="project 7">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>Always continue the climb. It is possible for you to do whatever you choose, if you first get to know who you are and are willing to work with a power that is greater than ourselves to do it.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 7 -->
+
+
                     <!-- Start details for portfolio project 8 -->
                     <div id="slidingDiv7" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="../../assets/images/Portfolio08.png" alt="project 8">
+                            <img [src]="portafolio.desc4.url" alt="project 8">
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>{{portafolio.desc4.Nombre}}</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
@@ -369,135 +270,56 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End details for portfolio project 8 -->
-                    <!-- Start details for portfolio project 9 -->
-                    <div id="slidingDiv8" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="../../assets/images/Portfolio09.png" alt="project 9">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>I learned that we can do anything, but we can't do everything... at least not at the same time. So think of your priorities not in terms of what activities you do, but when you do them. Timing is everything.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 9 -->
+
                     <ul id="portfolio-grid" class="thumbnails row">
-                        <li class="span4 mix web" *ngFor="let cliente of clientes">
-                            <div class="thumbnail">
-                                <img src="../../assets/images/Portfolio01.png" alt="project 1">
-                                <a href="#single-project" class="more show_hide" rel="#slidingDiv">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
+
                         <li class="span4 mix photo">
                             <div class="thumbnail">
-                                <img src="../../assets/images/Portfolio02.png" alt="project 2">
+                                <img [src]="thumbnail.thumbnail1.url" alt="project 2">
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv1">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>{{thumbnail.thumbnail1.titulo}}</h3>
+                                <p>{{thumbnail.thumbnail1.subtitulo}}</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
                         <li class="span4 mix identity">
                             <div class="thumbnail">
-                                <img src="../../assets/images/Portfolio03.png" alt="project 3">
+                                <img [src]="thumbnail.thumbnail2.url" alt="project 3">
                                 <a href="#single-project" class="more show_hide" rel="#slidingDiv2">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>{{thumbnail.thumbnail2.titulo}}</h3>
+                                <p>{{thumbnail.thumbnail2.subtitulo}}</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
+
                         <li class="span4 mix web">
                             <div class="thumbnail">
-                                <img src="../../assets/images/Portfolio04.png" alt="project 4">
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv3">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix photo">
-                            <div class="thumbnail">
-                                <img src="../../assets/images/Portfolio05.png" alt="project 5">
+                                <img [src]="thumbnail.thumbnail3.url" alt="project 5">
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv4">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>{{thumbnail.thumbnail3.titulo}}</h3>
+                                <p>{{thumbnail.thumbnail3.subtitulo}}</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix identity">
-                            <div class="thumbnail">
-                                <img src="../../assets/images/Portfolio06.png" alt="project 6">
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv5">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix web">
-                            <div class="thumbnail">
-                                <img src="../../assets/images/Portfolio07.png" alt="project 7" />
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv6">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
+
                         <li class="span4 mix photo">
                             <div class="thumbnail">
-                                <img src="../../assets/images/Portfolio08.png" alt="project 8">
+                                <img [src]="thumbnail.thumbnail4.url" alt="project 8">
                                 <a href="#single-project" class="show_hide more" rel="#slidingDiv7">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>{{thumbnail.thumbnail4.titulo}}</h3>
+                                <p>{{thumbnail.thumbnail4.subtitulo}}</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
-                        <li class="span4 mix identity">
-                            <div class="thumbnail">
-                                <img src="../../assets/images/Portfolio09.png" alt="project 9">
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv8">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -576,17 +398,17 @@
             </div>
         </div>
         <!-- About us section end -->
-        <div class="section secondary-section">
+        <!-- <div class="section secondary-section">
             <div class="triangle"></div>
             <div class="container centered">
                 <p class="large-text">{{generales.purchase_name}}</p>
                 <a href="#" class="button">Contratar ahora</a>
             </div>
-        </div>
+        </div> -->
         <!-- Client section start -->
 
         <div id="clients">
-          <div class="section third-section">
+          <!-- <div class="section third-section">
             <div class="container centered">
                 <div class="sub-section">
                     <div class="title clearfix">
@@ -634,20 +456,21 @@
                     </ul>
                 </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
 
 
         <!-- Price section start -->
         <div id="price" class="section secondary-section">
+          <div class="triangle"></div>
           <div class="container">
               <div class="title">
                   <h1>Precios</h1>
                   <p>Subscribete a nuestra aplicación <strong>Closer</strong> para poder recibir publicidad a tu negocio en nuestra plataforma, contamos con diferentes planes de acuerdo a tus necesidades</p>
               </div>
               <div class="price-table row-fluid">
-                  <div class="span4 price-column"*ngFor="let price of prices">
+                  <!-- <div class="span4 price-column"*ngFor="let price of prices">
                       <h3>{{price.titulo}}</h3>
                       <ul class="list">
                           <li class="price">{{price.precio}}</li>
@@ -656,7 +479,7 @@
                           <li>{{price.car_3}}</li>
                       </ul>
                       <a href="#contact" class="button button-ps">Contáctanos</a>
-                  </div>
+                  </div> -->
                   <!-- <div class="span4 price-column">
                       <h3>Pro</h3>
                       <ul class="list">

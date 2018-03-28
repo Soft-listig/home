@@ -22,6 +22,8 @@ export class AppComponent {
   public email2:string;
   public clientes:any=[];
   public services:any=[];
+  public portafolio:any=[];
+  public thumbnail:any=[];
   date:any;
   constructor(public _is:InformacionService, public http:Http, private afDB:AngularFireDatabase){
     this.home_data();
@@ -31,6 +33,8 @@ export class AppComponent {
     this.prices_data();
     this.clientes_data();
     this.servicios();
+    this.thumbnail_data();
+    this.portafolio_data();
     this.date= new Date().getFullYear();
 }
 
@@ -111,6 +115,20 @@ send_comments(f: NgForm){
       });
     }
 
+}
+thumbnail_data(){
+  this.http.get("https://softlistig-cb3a2.firebaseio.com/thumbnails_portafolio.json").subscribe(data=>{
+    this.thumbnail=data.json();
+
+
+      // this.generales.splice(0,1);
+  });
+}
+portafolio_data(){
+  this.http.get("https://softlistig-cb3a2.firebaseio.com/portafolio_descriptions.json").subscribe(data=>{
+    this.portafolio=data.json();
+    console.log(this.portafolio.desc3.Nombre);
+});
 }
 
 }
