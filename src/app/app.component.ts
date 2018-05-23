@@ -81,7 +81,7 @@ this.http.get("https://softlistig-cb3a2.firebaseio.com/price.json").subscribe(da
     this.http.get("https://softlistig-cb3a2.firebaseio.com/generales.json").subscribe(data=>{
       this.generales=data.json();
 
-        this.generales.splice(0,1);
+        // this.generales.splice(0,1);
     });
   }
   subscribe_news(f: NgForm){
